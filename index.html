@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hybrid Interactive Wallpaper (Canvas / three.js)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="bg-layer"></div>
+
+  <canvas id="fx-canvas"></canvas>
+
+  <!-- Settings panel (hidden by default) -->
+  <div id="settings" class="hidden">
+    <h3>Settings</h3>
+    <label>Performance mode: <input id="perfToggle" type="checkbox"></label>
+    <label>Star cycle: <input id="starCycleToggle" type="checkbox" checked></label>
+    <label>Star interval: <input id="starInterval" type="range" min="3" max="120" value="15"></label>
+    <label>Leaf density: <input id="leafDensity" type="range" min="5" max="200" value="40"></label>
+    <label>Wind speed: <input id="windSpeed" type="range" min="0" max="3" step="0.1" value="1"></label>
+    <button id="closeSettings">Close</button>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

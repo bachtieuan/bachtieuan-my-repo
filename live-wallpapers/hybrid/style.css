@@ -1,0 +1,24 @@
+:root{
+  --panel-bg: rgba(8,8,12,0.7);
+  --accent: #8e52ff;
+  color-scheme: dark;
+}
+html,body{height:100%;margin:0;background:#000;font-family:Inter,Segoe UI,Roboto,Arial;}
+#bg-layer{
+  position:fixed;inset:0;background-image:url('wallpaper.jpg');background-size:cover;background-position:center;
+  transform-origin:center center;transition:transform 0.12s linear;will-change:transform;z-index:0;filter:saturate(1.02) contrast(1.02);
+}
+#fx-canvas{position:fixed;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;display:block;}
+#settings{
+  position:fixed;left:12px;top:12px;z-index:10;padding:12px;border-radius:10px;backdrop-filter:blur(6px);
+  background:var(--panel-bg);color:#fff;max-width:300px;font-size:13px;box-shadow:0 6px 24px rgba(0,0,0,0.6);
+}
+.hidden{display:none;}
+#settings h3{margin:0 0 8px 0;font-size:15px;color:var(--accent);}
+#settings label{display:block;margin:6px 0;}
+#settings input[type=range]{width:100%;}
+#settings input[type=checkbox]{transform:scale(1.05);margin-left:6px;}
+#settings button{margin-top:8px;padding:6px 10px;border-radius:6px;border:none;background:linear-gradient(90deg,var(--accent),#6ea0ff);color:#fff;cursor:pointer;}
+/* small helper for press-and-hold hint */
+#holdHint{position:fixed;left:12px;bottom:12px;z-index:9;background:rgba(0,0,0,0.45);color:#fff;padding:8px 10px;border-radius:8px;font-size:13px;}
+@media (prefers-reduced-motion: reduce){#bg-layer{transition:none!important;}}
